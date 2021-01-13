@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+.row {max-width:960px; margin:0 auto}
+
+body {font-size:16px; color:#333; font-family:'나눔고딕';}
+
+#header {box-shadow:0 2px 3px #ddd; position: relative; z-index: 99;}
+#header h1 {float:left; width:40%}
+#header nav {float:right; width:60%; margin-top:35px;}
+#header nav .depth1 > li {
+    float:left;
+    width:33.33%;
+    text-align:center;
+    position:relative;
+}
+#header .depth1 >li>a {display: block; padding: 13px 0;}
+#header .depth1 > li:hover>a {background:#009688; color:#fff; }
+
+.depth2 {display:none; background:rgba(255,255,255,0.6);
+    position:absolute; top:100%; left:0; width:100%;}
+#header nav .depth1>li:hover .depth2 {display:block}
+.depth2>li {line-height:2}
+.depth2 >li>a {display: block;}
+.depth2>li:hover {color: #fff; background: #009688;}
+
+
+#section .slide > div {position:relative;}
+#section .slide > div >.text {position:absolute; top:50%; left:50%;
+    transform:translate(-50%,-50%);
+    background:rgba(255,255,255,0.6);
+    border-radius:20px;
+    text-align:center;
+    padding: 20px 40px;
+}
+#section .slide > div >.text h2 {font-size:32px; font-weight:bold;}
+#section .slide > div >.text p {font-size:26px; margin-top:15px;}
+/* 공지사항 */
+#section .ntpt {margin-top:30px}
+#section .notice {float:left; width:48%}
+#section .partner {float:right; width:48%}
+#section .ntpt h2 {font-size: 18px; font-weight:bold;
+    margin-bottom:15px; text-align:center;}
+.notice table {font-size:12px; border-top:2px solid #000}
+.notice col:nth-child(1) {width:auto;}
+.notice col:nth-child(2) {width:85px;}
+.notice table td, .notice table th {padding:10px 8px}
+.notice table th {font-weight:bold}
+.notice table tbody tr:nth-child(2n+1) {background:lime}
+.notice table td:nth-child(1) {
+    /* white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis; */
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.notice table td:nth-child(2) {text-align: right;}
